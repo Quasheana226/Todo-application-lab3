@@ -19,11 +19,21 @@ function todoReducer(state: Todo[], action: TodoAction): Todo[] {
 
         case 'ADD_TODO': {
             const newTodo: Todo = {
-                id: `todo-${Date.now}`, // gives a unique number 
-                text: action.played, // the text the user typed 
+                id: `todo-${Date.now()}`, // gives a unique number
+                text: action.payload, // the text the user typed
                 completed: false
             }
             return [...state, newTodo];
         }
+
+        //TOGGOLE ID
+        case 'TOGGLE_TODO': {
+            return state.map(todo =>
+                todo.id === action.payload ? { ...todo, completed: !todo.completed } : todo
+            );
+        }
+
+        default:
+            return state;
     }
 }
