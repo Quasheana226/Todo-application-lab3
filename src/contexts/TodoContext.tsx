@@ -33,6 +33,10 @@ function todoReducer(state: Todo[], action: TodoAction): Todo[] {
             );
         }
 
+        case 'CLEAR_COMPLETED': {
+            //keep only todos where completed is false
+            return state.filter(todo => !todo.completed);
+        }
         default:
             return state;
     }
