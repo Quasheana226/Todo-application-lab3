@@ -1,8 +1,14 @@
 import Dashboard from './components/Dashboard/Dashboard';
-
+import { AppProviders } from './contexts/AppProviders';
 
 function App() {
-  return <Dashboard />;
+  return (
+    <AppProviders>
+      <Dashboard />;
+
+    </AppProviders>
+
+  );
 }
 
 export default App

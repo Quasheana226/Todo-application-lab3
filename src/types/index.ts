@@ -45,3 +45,36 @@ export interface FilterContextType {
     setFilter: (filter: FilterValue) => void;
 
 }
+
+export interface ThemeContextType {
+    theme: ThemeValue;
+    toggleTheme: () => void;
+
+}
+
+export type TaskStatus = 'pending' | 'in-progress' | 'completed';
+
+export interface Task {
+    id: string;
+    title: string;
+    description: string;
+    priority: 'low' | 'medium' | 'high';
+    status: TaskStatus;
+    dueDate: string;
+}
+
+export interface TaskFormProps {
+    onAddTask: (task: Task) => void;
+    taskToEdit: Task | null;
+    onCancel: () => void;
+}
+
+export interface TaskFilterCriteria {
+    status?: TaskStatus;
+    priority?: 'low' | 'medium' | 'high';
+    search?: string;
+}
+
+export interface TaskFilterProps {
+    onFilterChange: (criteria: TaskFilterCriteria) => void;
+}

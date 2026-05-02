@@ -6,16 +6,16 @@
 
 import React, { useState, useEffect } from 'react';
 import type { Task, TaskStatus } from '../../types';
-import TaskFilter from '../TaskFilter/TaskFilter.tsx';
-import TaskList from '../TaskList/TaskList.tsx';
-import TaskForm from '../TaskForm/TaskForm.tsx';
+import TaskFilter from '../TaskFilter/TaskFilter';
+import TaskList from '../TaskList/TaskList';
+import TaskForm from '../TaskForm/TaskForm';
 
 //Context hooks
-import { useTodo } from '../../contexts/TodoContext.tsx';
+import { useTodo } from '../../contexts/TodoContext';
 
-import { useFilter } from '../../contexts/FilterContext.tsx';
+import { useFilter } from '../../contexts/FilterContext';
 
-import { useTheme } from '../../contexts/ThemeContext.tsx';
+import { useTheme } from '../../contexts/ThemeContext';
 
 
 
