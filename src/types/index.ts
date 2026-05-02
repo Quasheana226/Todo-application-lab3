@@ -10,7 +10,13 @@ export interface Todo {
 export type FilterValue = 'all' | 'active' | ' completed';
 
 
-// Theme Values 
+// THEME VALUES 
 export type ThemeValue = 'light' | 'dark';
+
+
+// REDUCER ACTIONS 
+
+export type TodoAction = | { type: 'ADD_TODO'; payload: string } // text 
+    
 
 
