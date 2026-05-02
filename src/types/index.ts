@@ -17,9 +17,9 @@ export type ThemeValue = 'light' | 'dark';
 // REDUCER ACTIONS 
 
 export type TodoAction = | { type: 'ADD_TODO'; payload: string } // text 
-    | { type: 'TOGGLE+TODO', payload: string }//ID
+    | { type: 'TOGGLE_TODO', payload: string }//ID
     | { type: 'DELETE_TODO', payload: string } //ID
-    | { type: 'EDOT_TODO', payload: { id: string; newText: string } } // ID + New Text 
+    | { type: 'EDIT_TODO', payload: { id: string; newText: string } } // ID + New Text
     | { type: 'CLEAR_COMPLETED' }
 
 
